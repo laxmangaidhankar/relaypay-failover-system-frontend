@@ -38,13 +38,14 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/divider" />
+            android:background="@color/white" />
 
         <!-- Filter chip row -->
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="none"
+            android:background="#19212F"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:paddingTop="12dp"
@@ -53,6 +54,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -62,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@drawable/bg_chip_active"
+                    android:background="@drawable/bg_blue_circle"
                     android:gravity="center"
                     android:paddingStart="18dp"
                     android:paddingEnd="18dp"
