@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fitsSystemWindows="true">
+
+    <!-- ══════════ SCROLL BODY ══════════ -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="72dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ── TOP BAR ── -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="12dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Profile"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/ivEdit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_edit"
+                    android:contentDescription="Edit profile"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="@color/black" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <!-- Avatar circle -->
+                <FrameLayout
+                    android:layout_width="84dp"
+                    android:layout_height="84dp">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_avatar_circle" />
+
+                    <TextView
+                        android:id="@+id/tvProfileInitials"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="#19212F"
+                        android:text="LK"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <!-- Full name -->
+                <TextView
+                    android:id="@+id/tvProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Laxman Kadam"
+                    android:textColor="@color/relaypay_text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Phone -->
+                <TextView
+                    android:id="@+id/tvProfilePhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+91 98xxx xxx21"
+                    android:textColor="@color/relaypay_text_secondary"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+            <!-- ── LINKED BANK + UPI CARDS ROW ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!-- Linked bank card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardBackgroundColor="#1A1D26"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Primary bank"
+                            android:textColor="@color/relaypay_text_secondary"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvLinkedBank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="HDFC ••4821"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- UPI ID card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardBackgroundColor="#1A1D26"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Virtual Acc No."
+                            android:textColor="@color/relaypay_text_secondary"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvUpiId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="1234567890"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <!-- ── ACCOUNT SECTION ── -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="8dp"
+                android:text="ACCOUNT"
+                android:textColor="@color/relaypay_text_secondary"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <!-- Linked bank accounts -->
+            <include
+                android:id="@+id/menuLinkedBanks"
+                layout="@layout/item_profile_menu" />
+
+            <!-- Failover rail preferences -->
+            <include
+                android:id="@+id/menuFailoverRail"
+                layout="@layout/item_profile_menu" />
+
+            <!-- Manage family circle -->
+            <include
+                android:id="@+id/menuFamilyCircle"
+                layout="@layout/item_profile_menu" />
+
+            <!-- ── SECURITY SECTION ── -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="8dp"
+                android:text="SECURITY"
+                android:textColor="@color/relaypay_text_secondary"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <!-- Change PIN -->
+            <include
+                android:id="@+id/menuChangePIN"
+                layout="@layout/item_profile_menu" />
+
+            <!-- Biometric login with switch -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/ivBiometricIcon"-->
+                <!--                    android:layout_width="22dp"-->
+                <!--                    android:layout_height="22dp"-->
+                <!--                    android:layout_alignParentStart="true"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:src="@drawable/ic_fingerprint"-->
+                <!--                    android:tint="@color/relaypay_text_primary"-->
+                <!--                    android:contentDescription="Biometric" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="14dp"
+                    android:text="Biometric login"
+                    android:textColor="@color/relaypay_text_primary"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <!--                <androidx.appcompat.widget.SwitchCompat-->
+                <!--                    android:id="@+id/switchBiometric"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentEnd="true"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:checked="true"-->
+                <!--                    app:thumbTint="@android:color/white"-->
+                <!--                    app:trackTint="@color/switch_track_selector" />-->
+            </RelativeLayout>
+
+            <!-- Audit log -->
+            <include
+                android:id="@+id/menuAuditLog"
+                layout="@layout/item_profile_menu" />
+
+
+            <!-- ── LOG OUT BUTTON ── -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/relaypay_disabled_bg"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="18dp"
+                                            android:layout_height="18dp"
+                                            android:src="@drawable/ic_logout"
+                                            android:tint="#ff0000"
+                                            android:contentDescription="Log out" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:text="Log out"
+                                            android:textColor="#ff0000"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- bottom spacer -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- ══════════ BOTTOM NAVIGATION ══════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!-- Home (active) -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home"
+                app:tint="#9CA3AF" />
+
+
+        </LinearLayout>
+
+        <!-- Bills / Transactions -->
+        <LinearLayout
+            android:id="@+id/navBills"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_history"
+                android:contentDescription="Transactions"
+                app:tint="#9CA3AF"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navQr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_qr_fab">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_scan"
+                    android:contentDescription="Scan QR"
+                    app:tint="#FFFFFF" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navFamily"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_group"
+                android:contentDescription="Family"
+                app:tint="#9CA3AF"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navAccount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_account"
+                android:contentDescription="Account"
+                app:tint="#111827"
+                />
+            <View
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/dot_active" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
