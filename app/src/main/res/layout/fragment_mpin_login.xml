@@ -1,317 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/relaypay_bg"
+    android:background="#FFFFFF"
     android:fillViewport="true"
-    tools:context=".AuthenticationActivity">
+    tools:context=".activities.AuthenticationActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
-        <!-- Outer white rounded card wrapping everything -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/outerCard"
+        <View
+            android:id="@+id/beigePanel"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            app:cardBackgroundColor="@color/relaypay_card_bg"
-            android:src="@drawable/bg_outer_card"
+            android:layout_height="0dp"
+            android:background="@color/onboard_beige"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/whitePanel"
+            app:layout_constraintHeight_percent="0.54" />
 
-
+        <LinearLayout
+            android:id="@+id/brandBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="20dp">
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_relaypay_logo"
+                android:background="@drawable/bg_logo_circle_dark"
+                android:padding="5dp"
+                android:contentDescription="@string/app_name" />
 
-                <!-- Logo mark -->
-                <ImageView
-                    android:id="@+id/logoIcon"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_relaypay_logo"
-                    android:contentDescription="@string/app_name"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/app_name"
+                android:textColor="@color/onboard_text_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-                <!-- App name next to logo -->
-                <TextView
-                    android:id="@+id/appName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/app_name"
-                    android:textColor="@color/relaypay_text_primary"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="@id/logoIcon"
-                    app:layout_constraintBottom_toBottomOf="@id/logoIcon"
-                    app:layout_constraintStart_toEndOf="@id/logoIcon" />
+        <ImageView
+            android:id="@+id/ivIllustration"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/il_payment_people"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            app:layout_constraintTop_toBottomOf="@id/brandBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/whitePanel"
+            app:layout_constraintVertical_bias="0.5" />
 
-                <!-- Welcome title -->
-                <TextView
-                    android:id="@+id/welcomeTitle"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/whitePanel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_white_panel"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.46">
+
+            <LinearLayout
+                android:id="@+id/dotsRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/dot_active"
+                    android:layout_marginEnd="6dp" />
+
+                <!-- Inactive dot -->
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/dot_inactive"
+                    android:layout_marginEnd="6dp" />
+
+                <!-- Inactive dot -->
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/dot_inactive" />
+            </LinearLayout>
+
+            <!-- Main headline -->
+            <TextView
+                android:id="@+id/tvHeadline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Use your MPIN to continue securely."
+                android:textColor="@color/onboard_text_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="2dp"
+                app:layout_constraintTop_toBottomOf="@id/dotsRow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+            <LinearLayout
+                android:id="@+id/inputMpinRow"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_input_outlined"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvHeadline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <EditText
+                    android:id="@+id/etMPIN"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:text="@string/welcome_title"
-                    android:textColor="@color/relaypay_text_primary"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:lineSpacingExtra="2dp"
-                    app:layout_constraintTop_toBottomOf="@id/logoIcon"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/illustrationGroup"
-                    app:layout_constraintWidth_percent="0.55" />
-
-                <!-- Welcome subtitle -->
-                <TextView
-                    android:id="@+id/welcomeSubtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/welcome_subtitle"
-                    android:textColor="@color/relaypay_text_secondary"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@id/welcomeTitle"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/illustrationGroup"
-                    app:layout_constraintWidth_percent="0.55" />
-
-                <!-- Illustration cluster (top-right icons) -->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/illustrationGroup"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_marginTop="4dp"
-                    app:layout_constraintTop_toTopOf="@id/welcomeTitle"
-                    app:layout_constraintEnd_toEndOf="parent">
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:src="@drawable/bg_banks"
-                        android:contentDescription="@null"
-                        />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="MPIN"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:textColor="@color/onboard_text_dark"
+                    android:textColorHint="#9CA3AF"
+                    android:textAlignment="center"
+                    android:textSize="15sp" />
 
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
-                <!-- Sign In card -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/signInCard"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    app:cardBackgroundColor="@color/relaypay_card_bg"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="20dp"
-                    app:strokeColor="@color/relaypay_border"
-
-                    app:strokeWidth="1dp"
-                    app:layout_constraintTop_toBottomOf="@id/welcomeSubtitle"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-
-                        android:padding="22dp">
-
-                        <TextView
-                            android:id="@+id/signInTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="MPIN"
-                            android:textColor="@color/relaypay_text_primary"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/signInSubtitle"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Enter your 4-digit MPIN"
-                            android:textColor="@color/relaypay_text_secondary"
-                            android:textSize="14sp" />
-
-                        <!-- Mobile number label -->
-
-
-                        <!-- Mobile number input field -->
-                        <LinearLayout
-                            android:id="@+id/otpContainer"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-
-                            <EditText
-                                android:id="@+id/pin1"
-                                android:layout_width="45dp"
-                                android:layout_height="45dp"
-                                android:layout_margin="4dp"
-                                android:background="@drawable/bg_input_field"
-                                android:gravity="center"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:textColor="@color/relaypay_text_primary"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                            <EditText
-                                android:id="@+id/pin2"
-                                android:layout_width="45dp"
-                                android:layout_height="45dp"
-                                android:layout_margin="4dp"
-                                android:background="@drawable/bg_input_field"
-                                android:gravity="center"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:textColor="@color/relaypay_text_primary"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                            <EditText
-                                android:id="@+id/pin3"
-                                android:layout_width="45dp"
-                                android:layout_height="45dp"
-                                android:layout_margin="4dp"
-                                android:background="@drawable/bg_input_field"
-                                android:gravity="center"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:textColor="@color/relaypay_text_primary"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                            <EditText
-                                android:id="@+id/pin4"
-                                android:layout_width="45dp"
-                                android:layout_height="45dp"
-                                android:layout_margin="4dp"
-                                android:background="@drawable/bg_input_field"
-                                android:gravity="center"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:textColor="@color/relaypay_text_primary"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvResendOtp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="Forget MPIN?"
+                android:textColor="#9CA3AF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/inputMpinRow"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
 
 
-                        </LinearLayout>
-                        <!-- Continue button -->
-                        <Button
-                            android:id="@+id/btnContinue"
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:layout_marginTop="18dp"
-                            android:background="@drawable/bg_btn_primary"
-                            android:elevation="0dp"
-                            android:text="@string/btn_continue"
-                            android:textAllCaps="false"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVerifyOtp"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_btn_black"
+                android:backgroundTint="@null"
+                android:text="Proceed"
+                app:backgroundTint="@null"
+                android:textAllCaps="false"
+                android:textColor="@color/onboard_beige"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvResendOtp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
 
-
-                        <!-- OR divider -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="1dp"
-                                android:layout_weight="1"
-                                android:background="@color/relaypay_border" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="12dp"
-                                android:layout_marginEnd="12dp"
-                                android:text="@string/or_divider"
-                                android:textColor="@color/relaypay_text_secondary"
-                                android:textSize="13sp" />
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="1dp"
-                                android:layout_weight="1"
-                                android:background="@color/relaypay_border" />
-                        </LinearLayout>
-
-                        <!-- Fingerprint button (disabled state until number entered) -->
-                        <Button
-                            android:id="@+id/btnFingerprint"
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:layout_marginTop="16dp"
-                            android:background="@drawable/bg_btn_disabled"
-                            android:drawableStart="@drawable/ic_fingerprint"
-                            android:drawablePadding="10dp"
-                            android:elevation="0dp"
-                            android:enabled="false"
-                            android:gravity="center"
-                            android:paddingStart="24dp"
-                            android:text="@string/btn_fingerprint"
-                            android:textAllCaps="false"
-                            android:textColor="@color/relaypay_disabled_text"
-                            android:textSize="15sp" />
-
-                        <!-- New to RelayPay / Create Wallet row -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="18dp"
-                            android:gravity="center_vertical"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:id="@+id/btnCreateWallet"
-                                android:layout_width="wrap_content"
-
-                                android:layout_height="wrap_content"
-                                android:text="Forgot MPIN?"
-                                android:textColor="@color/relaypay_link"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>
