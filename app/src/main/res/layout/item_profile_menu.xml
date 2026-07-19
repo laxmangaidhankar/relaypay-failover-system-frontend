@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Reusable profile menu row — icon + label + chevron.
+  Bind from ProfileActivity:
+    ivMenuIcon   — set src to the relevant icon drawable
+    tvMenuLabel  — set text (e.g. "Linked bank accounts")
+  Rows with a toggle use the inline biometric layout instead.
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="17dp"
+    android:paddingBottom="17dp">
+
+    <!-- Left icon -->
+    <ImageView
+        android:id="@+id/ivMenuIcon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_bank"
+        android:contentDescription="Menu icon"
+        app:tint="@color/black" />
+
+    <!-- Label -->
+    <TextView
+        android:id="@+id/tvMenuLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivMenuIcon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="14dp"
+        android:text="Menu item"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <!-- Chevron -->
+<!--    <ImageView-->
+<!--        android:id="@+id/ivMenuChevron"-->
+<!--        android:layout_width="18dp"-->
+<!--        android:layout_height="18dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:src="@drawable/ic_chevron_right"-->
+<!--        android:tint="@color/white"-->
+<!--        android:contentDescription="Navigate" />-->
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp">
+
+    <!-- Coloured circle icon -->
+    <FrameLayout
+        android:id="@+id/frmTxIcon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
+
+<!--        <View-->
+<!--            android:id="@+id/viewIconBg"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/bg_circle_red" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivTxArrow"-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@drawable/ic_arrow_up_right"-->
+<!--            android:tint="#FFFFFF"-->
+<!--            android:contentDescription="Transaction type" />-->
+    </FrameLayout>
+
+    <!-- Name + meta -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/frmTxIcon"
+        android:layout_toStartOf="@id/layoutAmountStatus"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="14dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTxName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Priya Sharma"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTxMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="6:42 PM · UPI"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Amount + status stacked right -->
+    <LinearLayout
+        android:id="@+id/layoutAmountStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTxAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-₹1,200"
+            android:textColor="@color/relaypay_text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTxStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Settled"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
