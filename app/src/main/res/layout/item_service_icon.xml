@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Reusable service grid item — icon + label.
+  Bind from HomeActivity:
+    ivServiceIcon  → set src + tint per service
+    tvServiceLabel → set text ("Internet", "Water", etc.)
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <!-- Icon circle background -->
+    <FrameLayout
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_service_icon_bg">
+
+        <ImageView
+            android:id="@+id/ivServiceIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_family"
+            android:tint="#111827"
+            android:contentDescription="Service" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvServiceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Family"
+        android:textColor="#374151"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+</LinearLayout>
