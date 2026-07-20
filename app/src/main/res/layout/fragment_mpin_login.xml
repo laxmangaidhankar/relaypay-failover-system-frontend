@@ -156,9 +156,10 @@
                     android:layout_weight="1"
                     android:background="@null"
                     android:hint="MPIN"
+
                     android:imeOptions="actionDone"
                     android:inputType="phone"
-                    android:maxLength="10"
+                    android:maxLength="4"
                     android:textColor="@color/onboard_text_dark"
                     android:textColorHint="#9CA3AF"
                     android:textAlignment="center"
@@ -186,7 +187,7 @@
 
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnVerifyOtp"
+                android:id="@+id/btnMpinLogin"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_marginTop="12dp"

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
-    tools:context=".HomeActivity">
+    tools:context=".activities.HomeActivity">
 
     <!-- ══ SCROLLABLE BODY ══ -->
     <androidx.core.widget.NestedScrollView
@@ -148,7 +148,6 @@
                             android:layout_marginStart="16dp"
                             android:padding="8dp"
                             android:text="Learn More"
-                            android:textColor="@color/login_text_primary"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -246,7 +245,7 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:src="@drawable/ic_checkbalance"
+                            android:src="@drawable/ic_checkmoney"
                             android:contentDescription="Request"
                             app:tint="#FFFFFF" />
 
@@ -492,125 +491,6 @@
     </androidx.core.widget.NestedScrollView>
 
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_gravity="bottom"
-        android:background="#FFFFFF"
-        android:elevation="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="5">
-
-        <!-- Home (active) -->
-        <LinearLayout
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_home"
-                android:contentDescription="Home"
-                app:tint="#111827" />
-
-            <View
-                android:layout_width="6dp"
-                android:layout_height="6dp"
-                android:layout_marginTop="3dp"
-                android:background="@drawable/dot_active" />
-        </LinearLayout>
-
-        <!-- Bills / Transactions -->
-        <LinearLayout
-            android:id="@+id/navBills"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_history"
-                android:contentDescription="Transactions"
-                app:tint="#9CA3AF" />
-        </LinearLayout>
-
-        <!-- QR Code FAB (centre, raised dark circle) -->
-        <LinearLayout
-            android:id="@+id/navQr"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <FrameLayout
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/bg_qr_fab">
-
-                <ImageView
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_scan"
-                    android:contentDescription="Scan QR"
-                    app:tint="#FFFFFF" />
-            </FrameLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navFamily"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_group"
-                android:contentDescription="Family"
-                app:tint="#9CA3AF" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navAccount"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_account"
-                android:contentDescription="Account"
-                app:tint="#9CA3AF" />
-        </LinearLayout>
-
-    </LinearLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

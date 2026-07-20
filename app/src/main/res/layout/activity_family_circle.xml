@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="#0D0F14"
     android:fitsSystemWindows="true">
 
     <!-- ══════════ SCROLL BODY ══════════ -->
@@ -35,22 +35,22 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="Family circle"
-                    android:textColor="@color/black"
+                    android:textColor="#FFFFFF"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <!--                <ImageView-->
-                <!--                    android:id="@+id/ivSettings"-->
-                <!--                    android:layout_width="40dp"-->
-                <!--                    android:layout_height="40dp"-->
-                <!--                    android:layout_alignParentEnd="true"-->
-                <!--                    android:layout_centerVertical="true"-->
-                <!--                    android:padding="8dp"-->
-                <!--                    android:src="@drawable/ic_settings"-->
-                <!--                    android:tint="@color/relaypay_text_primary"-->
-                <!--                    android:contentDescription="Settings"-->
-                <!--                    android:clickable="true"-->
-                <!--                    android:focusable="true" />-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/ivSettings"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:src="@drawable/ic_settings"-->
+<!--                    android:tint="@color/relaypay_text_primary"-->
+<!--                    android:contentDescription="Settings"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true" />-->
             </RelativeLayout>
 
 
@@ -59,10 +59,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                app:cardBackgroundColor="#19212F"
-
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#1A1D26"
                 app:cardCornerRadius="18dp"
                 app:cardElevation="0dp">
 
@@ -72,33 +71,27 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-
-
-                    <!-- Description -->
+                    <!-- Label -->
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Invite your family members to send, receive, and manage payments together."
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-
-                    <!-- Button -->
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnAddMember"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="18dp"
-                        android:text="Add Member"
-                        app:backgroundTint="@color/brand_blue"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:drawablePadding="8dp"
-                        app:cornerRadius="12dp" />
+                        android:layout_height="wrap_content"
+                        android:text="Circle pool balance"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp" />
+
+                    <!-- Amount -->
+                    <TextView
+                        android:id="@+id/tvPoolBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="₹8,300.00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+
 
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
 
@@ -117,7 +110,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:text="Members"
-                    android:textColor="#000"
+                    android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -128,7 +121,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:text="+ Invite"
-                    android:textColor="#1B1243"
+                    android:textColor="#7665CA"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:clickable="true"
@@ -180,15 +173,15 @@
                     android:padding="16dp">
 
                     <!-- Clock icon -->
-                    <!--                    <ImageView-->
-                    <!--                        android:id="@+id/ivPendingIcon"-->
-                    <!--                        android:layout_width="22dp"-->
-                    <!--                        android:layout_height="22dp"-->
-                    <!--                        android:layout_alignParentStart="true"-->
-                    <!--                        android:layout_centerVertical="true"-->
-                    <!--                        android:src="@drawable/ic_schedule"-->
-                    <!--                        android:tint="@color/relay_text"-->
-                    <!--                        android:contentDescription="Pending" />-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/ivPendingIcon"-->
+<!--                        android:layout_width="22dp"-->
+<!--                        android:layout_height="22dp"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/ic_schedule"-->
+<!--                        android:tint="@color/relay_text"-->
+<!--                        android:contentDescription="Pending" />-->
 
                     <!-- Text block -->
                     <LinearLayout
@@ -215,16 +208,16 @@
                             android:textSize="12sp" />
                     </LinearLayout>
 
-                    <!--                    &lt;!&ndash; Chevron right &ndash;&gt;-->
-                    <!--                    <ImageView-->
-                    <!--                        android:id="@+id/ivChevron"-->
-                    <!--                        android:layout_width="20dp"-->
-                    <!--                        android:layout_height="20dp"-->
-                    <!--                        android:layout_alignParentEnd="true"-->
-                    <!--                        android:layout_centerVertical="true"-->
-                    <!--                        android:src="@drawable/ic_chevron_right"-->
-                    <!--                        android:tint="@color/relay_text"-->
-                    <!--                        android:contentDescription="View details" />-->
+<!--                    &lt;!&ndash; Chevron right &ndash;&gt;-->
+<!--                    <ImageView-->
+<!--                        android:id="@+id/ivChevron"-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:layout_alignParentEnd="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/ic_chevron_right"-->
+<!--                        android:tint="@color/relay_text"-->
+<!--                        android:contentDescription="View details" />-->
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -251,12 +244,12 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <!--                    <ImageView-->
-                    <!--                        android:layout_width="18dp"-->
-                    <!--                        android:layout_height="18dp"-->
-                    <!--                        android:src="@drawable/ic_send_diagonal"-->
-                    <!--                        android:tint="@color/relaypay_text_primary"-->
-                    <!--                        android:contentDescription="Send" />-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="18dp"-->
+<!--                        android:layout_height="18dp"-->
+<!--                        android:src="@drawable/ic_send_diagonal"-->
+<!--                        android:tint="@color/relaypay_text_primary"-->
+<!--                        android:contentDescription="Send" />-->
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -278,125 +271,15 @@
     </androidx.core.widget.NestedScrollView>
 
     <!-- ══════════ BOTTOM NAVIGATION ══════════ -->
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#FFFFFF"
-        android:elevation="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="5">
-
-        <!-- Home (active) -->
-        <LinearLayout
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_home"
-                android:contentDescription="Home"
-                app:tint="#9CA3AF" />
-
-
-        </LinearLayout>
-
-        <!-- Bills / Transactions -->
-        <LinearLayout
-            android:id="@+id/navBills"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_history"
-                android:contentDescription="Transactions"
-                app:tint="#9CA3AF"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navQr"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <FrameLayout
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/bg_qr_fab">
-
-                <ImageView
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_scan"
-                    android:contentDescription="Scan QR"
-                    app:tint="#FFFFFF" />
-            </FrameLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navFamily"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_group"
-                android:contentDescription="Family"
-                app:tint="#111827"
-                />
-            <View
-                android:layout_width="6dp"
-                android:layout_height="6dp"
-                android:layout_marginTop="3dp"
-                android:background="@drawable/dot_active" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navAccount"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_account"
-                android:contentDescription="Account"
-                app:tint="#9CA3AF" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:background="#161829"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/bottom_nav_selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"
+        app:elevation="8dp" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

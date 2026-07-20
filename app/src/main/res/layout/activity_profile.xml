@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="#0D0F14"
     android:fitsSystemWindows="true">
 
     <!-- ══════════ SCROLL BODY ══════════ -->
@@ -24,34 +24,47 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:paddingStart="16dp"
+                android:paddingStart="8dp"
                 android:paddingEnd="12dp">
 
+<!--                <ImageView-->
+<!--                    android:id="@+id/ivBack"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:src="@drawable/ic_arrow_back"-->
+<!--                    android:tint="@color/relaypay_text_primary"-->
+<!--                    android:contentDescription="Back"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true" />-->
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="Profile"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-                <ImageView
-                    android:id="@+id/ivEdit"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_edit"
-                    android:contentDescription="Edit profile"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:tint="@color/black" />
 
+<!--                <ImageView-->
+<!--                    android:id="@+id/ivEdit"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:src="@drawable/ic_edit"-->
+<!--                    android:tint="@color/relaypay_text_primary"-->
+<!--                    android:contentDescription="Edit profile"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true" />-->
             </RelativeLayout>
 
 
+            <!-- ── AVATAR + NAME BLOCK ── -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,19 +78,19 @@
                 <FrameLayout
                     android:layout_width="84dp"
                     android:layout_height="84dp">
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/bg_avatar_circle" />
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="@drawable/bg_avatar_blue" />-->
 
                     <TextView
                         android:id="@+id/tvProfileInitials"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:background="#19212F"
                         android:text="LK"
-                        android:textColor="@color/white"
+                        android:textColor="#FFFFFF"
                         android:textSize="28sp"
                         android:textStyle="bold" />
                 </FrameLayout>
@@ -103,6 +116,24 @@
                     android:textColor="@color/relaypay_text_secondary"
                     android:textSize="13sp" />
 
+                <!-- KYC verified badge -->
+<!--                <TextView-->
+<!--                    android:id="@+id/tvKycBadge"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:background="@drawable/bg_badge_kyc"-->
+<!--                    android:drawableStart="@drawable/ic_verified"-->
+<!--                    android:drawablePadding="5dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:paddingStart="12dp"-->
+<!--                    android:paddingTop="5dp"-->
+<!--                    android:paddingEnd="14dp"-->
+<!--                    android:paddingBottom="5dp"-->
+<!--                    android:text="KYC verified"-->
+<!--                    android:textColor="#2ECC71"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold" />-->
             </LinearLayout>
 
 
@@ -135,7 +166,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Primary bank"
+                            android:text="Linked bank"
                             android:textColor="@color/relaypay_text_secondary"
                             android:textSize="11sp" />
 
@@ -170,7 +201,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Virtual Acc No."
+                            android:text="UPI ID"
                             android:textColor="@color/relaypay_text_secondary"
                             android:textSize="11sp" />
 
@@ -179,7 +210,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="1234567890"
+                            android:text="laxman@okhdfc"
                             android:textColor="@color/white"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -250,15 +281,15 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp">
 
-                <!--                <ImageView-->
-                <!--                    android:id="@+id/ivBiometricIcon"-->
-                <!--                    android:layout_width="22dp"-->
-                <!--                    android:layout_height="22dp"-->
-                <!--                    android:layout_alignParentStart="true"-->
-                <!--                    android:layout_centerVertical="true"-->
-                <!--                    android:src="@drawable/ic_fingerprint"-->
-                <!--                    android:tint="@color/relaypay_text_primary"-->
-                <!--                    android:contentDescription="Biometric" />-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/ivBiometricIcon"-->
+<!--                    android:layout_width="22dp"-->
+<!--                    android:layout_height="22dp"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:src="@drawable/ic_fingerprint"-->
+<!--                    android:tint="@color/relaypay_text_primary"-->
+<!--                    android:contentDescription="Biometric" />-->
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -270,15 +301,15 @@
                     android:textSize="15sp"
                     android:textStyle="normal" />
 
-                <!--                <androidx.appcompat.widget.SwitchCompat-->
-                <!--                    android:id="@+id/switchBiometric"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_alignParentEnd="true"-->
-                <!--                    android:layout_centerVertical="true"-->
-                <!--                    android:checked="true"-->
-                <!--                    app:thumbTint="@android:color/white"-->
-                <!--                    app:trackTint="@color/switch_track_selector" />-->
+<!--                <androidx.appcompat.widget.SwitchCompat-->
+<!--                    android:id="@+id/switchBiometric"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:checked="true"-->
+<!--                    app:thumbTint="@android:color/white"-->
+<!--                    app:trackTint="@color/switch_track_selector" />-->
             </RelativeLayout>
 
             <!-- Audit log -->
@@ -310,21 +341,21 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                                        <ImageView
-                                            android:layout_width="18dp"
-                                            android:layout_height="18dp"
-                                            android:src="@drawable/ic_logout"
-                                            android:contentDescription="Log out"
-                                            app:tint="#ff0000" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="18dp"-->
+<!--                        android:layout_height="18dp"-->
+<!--                        android:src="@drawable/ic_logout"-->
+<!--                        android:tint="@color/accent_red"-->
+<!--                        android:contentDescription="Log out" />-->
 
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginStart="10dp"
-                                            android:text="Log out"
-                                            android:textColor="#ff0000"
-                                            android:textSize="15sp"
-                                            android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:text="Log out"-->
+<!--                        android:textColor="@color/accent_red"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold" />-->
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -337,129 +368,16 @@
     </androidx.core.widget.NestedScrollView>
 
     <!-- ══════════ BOTTOM NAVIGATION ══════════ -->
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#FFFFFF"
-        android:elevation="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="5">
-
-        <!-- Home (active) -->
-        <LinearLayout
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_home"
-                android:contentDescription="Home"
-                app:tint="#9CA3AF" />
-
-
-        </LinearLayout>
-
-        <!-- Bills / Transactions -->
-        <LinearLayout
-            android:id="@+id/navBills"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_history"
-                android:contentDescription="Transactions"
-                app:tint="#9CA3AF"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navQr"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <FrameLayout
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/bg_qr_fab">
-
-                <ImageView
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_scan"
-                    android:contentDescription="Scan QR"
-                    app:tint="#FFFFFF" />
-            </FrameLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navFamily"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_group"
-                android:contentDescription="Family"
-                app:tint="#9CA3AF"
-
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navAccount"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_account"
-                android:contentDescription="Account"
-                app:tint="#111827"
-                />
-            <View
-                android:layout_width="6dp"
-                android:layout_height="6dp"
-                android:layout_marginTop="3dp"
-                android:background="@drawable/dot_active" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:background="#161829"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/bottom_nav_selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"
+        app:elevation="8dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -27,7 +27,7 @@
         android:layout_height="44dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/il_avatar_hat"
+        android:src="@drawable/il_running_man"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:contentDescription="@null" />
