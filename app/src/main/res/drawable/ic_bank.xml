@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/relaypay_primary"
+        android:pathData="M12,2 L22,8 L20,8 L20,9 L4,9 L4,8 L2,8 Z" />
+    <path
+        android:fillColor="@color/relaypay_primary"
+        android:pathData="M5,10 h2 v8 h-2 Z M9,10 h2 v8 h-2 Z M13,10 h2 v8 h-2 Z M17,10 h2 v8 h-2 Z" />
+    <path
+        android:fillColor="@color/relaypay_primary"
+        android:pathData="M3,19 h18 v2 h-18 Z" />
+</vector>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Payment people illustration — black line art on transparent bg.
+  Placed on top of the beige panel.
+  Viewport 360×260. Replace with a production illustration asset.
+  Depicts: woman sitting with phone, man standing with phone,
+  speech/message bubbles, two people at table sharing payment.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="260dp"
+    android:viewportWidth="360"
+    android:viewportHeight="260">
+
+    <!-- ── Ground line ── -->
+    <path android:pathData="M20,210 L340,210"
+        android:strokeColor="#111827" android:strokeWidth="1.5"
+        android:strokeLineCap="round" android:fillColor="#00000000"/>
+
+    <!-- ════ WOMAN SITTING LEFT ════ -->
+    <!-- Head -->
+    <path android:pathData="M72,90 m0,0 a14,14 0,1,1 0.01,0 Z"
+        android:fillColor="#111827"/>
+    <!-- Hair flowing back -->
+    <path android:pathData="M60,88 Q55,80 62,74 Q68,68 80,72 Q90,76 86,90"
+        android:fillColor="#111827" android:strokeColor="#111827" android:strokeWidth="1"/>
+    <!-- Body — seated, dark top -->
+    <path android:pathData="M58,104 Q60,98 72,96 Q84,98 86,104 L90,140 Q84,145 72,145 Q60,145 54,140 Z"
+        android:fillColor="#111827"/>
+    <!-- Legs / skirt spread on ground -->
+    <path android:pathData="M54,140 Q40,160 30,200 L60,200 Q65,170 72,155 Q79,170 84,200 L114,200 Q104,160 90,140 Z"
+        android:fillColor="#111827"/>
+    <!-- Bare feet -->
+    <path android:pathData="M28,200 Q24,204 32,206 Q36,206 38,200"
+        android:fillColor="#E8D5C0" android:strokeColor="#111827" android:strokeWidth="1"/>
+    <!-- Arm holding phone -->
+    <path android:pathData="M58,110 Q48,120 44,132 Q46,138 52,136 Q56,128 62,118"
+        android:fillColor="#111827" android:strokeColor="#111827" android:strokeWidth="1"/>
+    <!-- Phone in hand -->
+    <path android:pathData="M40,128 Q38,126 40,122 L52,114 Q54,112 56,114 L58,130 Q60,132 58,134 L46,142 Q44,144 42,142 Z"
+        android:fillColor="#FFFFFF" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+    <!-- Phone screen line -->
+    <path android:pathData="M43,124 L55,116 M43,128 L55,120 M43,132 L50,124"
+        android:strokeColor="#D1D5DB" android:strokeWidth="1" android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- Speech bubble from woman -->
+    <path android:pathData="M80,72 Q82,58 100,56 Q118,54 120,68 Q122,80 106,82 L102,90 L96,80 Q80,82 80,72 Z"
+        android:fillColor="#FFFFFF" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+    <!-- Dots in bubble -->
+    <path android:pathData="M92,69 m0,0 a3,3 0,1,1 0.01,0 Z" android:fillColor="#9CA3AF"/>
+    <path android:pathData="M100,69 m0,0 a3,3 0,1,1 0.01,0 Z" android:fillColor="#9CA3AF"/>
+    <path android:pathData="M108,69 m0,0 a3,3 0,1,1 0.01,0 Z" android:fillColor="#9CA3AF"/>
+
+    <!-- ════ MAN STANDING RIGHT ════ -->
+    <!-- Head -->
+    <path android:pathData="M268,56 m0,0 a15,15 0,1,1 0.01,0 Z"
+        android:fillColor="#E8D5C0" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+    <!-- Short hair -->
+    <path android:pathData="M254,52 Q255,42 268,40 Q282,40 283,52 L280,56 Q268,50 256,56 Z"
+        android:fillColor="#111827"/>
+    <!-- Dark body / top -->
+    <path android:pathData="M254,72 Q256,66 268,64 Q280,66 282,72 L286,110 Q280,114 268,114 Q256,114 250,110 Z"
+        android:fillColor="#111827"/>
+    <!-- Trousers (lighter) -->
+    <path android:pathData="M250,110 L246,200 L264,200 L268,160 L272,200 L290,200 L286,110 Z"
+        android:fillColor="#374151"/>
+    <!-- Shoes -->
+    <path android:pathData="M244,198 Q238,202 248,206 L264,206 Q268,202 264,198 Z"
+        android:fillColor="#111827"/>
+    <path android:pathData="M272,198 Q268,202 272,206 L288,206 Q294,202 288,198 Z"
+        android:fillColor="#111827"/>
+    <!-- Arm with phone -->
+    <path android:pathData="M282,80 Q292,88 294,100 Q292,108 286,106 Q284,96 278,88"
+        android:fillColor="#E8D5C0" android:strokeColor="#111827" android:strokeWidth="1"/>
+    <!-- Phone -->
+    <path android:pathData="M288,96 Q290,94 292,96 L298,116 Q300,120 298,122 Q296,124 292,122 L286,102 Q284,98 288,96 Z"
+        android:fillColor="#FFFFFF" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+    <!-- Phone screen -->
+    <path android:pathData="M289,104 L296,106 M289,109 L296,111 M289,114 L293,115"
+        android:strokeColor="#D1D5DB" android:strokeWidth="1" android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- Notification/message bubbles near man (rounded rects) -->
+    <path android:pathData="M200,70 Q198,66 202,64 L240,64 Q244,64 244,68 L244,76 Q244,80 240,80 L202,80 Q198,80 198,76 Z"
+        android:fillColor="#FFFFFF" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+    <path android:pathData="M210,90 Q208,86 212,84 L248,84 Q252,84 252,88 L252,96 Q252,100 248,100 L212,100 Q208,100 208,96 Z"
+        android:fillColor="#FFFFFF" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+    <!-- Lines inside bubbles -->
+    <path android:pathData="M206,72 L238,72 M206,76 L228,76"
+        android:strokeColor="#D1D5DB" android:strokeWidth="1" android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <path android:pathData="M216,92 L246,92 M216,96 L234,96"
+        android:strokeColor="#D1D5DB" android:strokeWidth="1" android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- ════ TABLE + TWO PEOPLE ════ -->
+    <!-- Table surface -->
+    <path android:pathData="M120,180 L240,180 L238,186 L122,186 Z"
+        android:fillColor="#D1D5DB" android:strokeColor="#111827" android:strokeWidth="1"/>
+    <!-- Table legs -->
+    <path android:pathData="M128,186 L126,210 M232,186 L234,210"
+        android:strokeColor="#111827" android:strokeWidth="2" android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- Man left at table -->
+    <!-- Head -->
+    <path android:pathData="M148,140 m0,0 a16,16 0,1,1 0.01,0 Z"
+        android:fillColor="#E8D5C0" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+    <!-- Beard -->
+    <path android:pathData="M134,148 Q134,158 148,160 Q162,158 162,148 Q155,154 148,154 Q141,154 134,148 Z"
+        android:fillColor="#111827"/>
+    <!-- T-shirt -->
+    <path android:pathData="M132,158 Q134,152 148,150 Q162,152 164,158 L166,178 Q158,180 148,180 Q138,180 130,178 Z"
+        android:fillColor="#F3F4F6" android:strokeColor="#111827" android:strokeWidth="1"/>
+    <!-- Arms on table -->
+    <path android:pathData="M130,168 Q120,172 118,178 L130,178 Q132,174 136,170"
+        android:fillColor="#E8D5C0" android:strokeColor="#111827" android:strokeWidth="1"/>
+    <path android:pathData="M166,168 Q176,172 178,178 L166,178 Q164,174 160,170"
+        android:fillColor="#E8D5C0" android:strokeColor="#111827" android:strokeWidth="1"/>
+    <!-- Phone / card on table -->
+    <path android:pathData="M136,174 Q136,170 140,170 L160,170 Q164,170 164,174 L164,178 Q164,182 160,182 L140,182 Q136,182 136,178 Z"
+        android:fillColor="#2563EB" android:strokeColor="#111827" android:strokeWidth="1"/>
+
+    <!-- Woman right at table -->
+    <!-- Head -->
+    <path android:pathData="M212,138 m0,0 a15,15 0,1,1 0.01,0 Z"
+        android:fillColor="#E8D5C0" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+    <!-- Hair -->
+    <path android:pathData="M198,134 Q200,120 212,118 Q224,120 226,134 Q224,130 212,130 Q200,130 198,134"
+        android:fillColor="#111827"/>
+    <!-- Dark top -->
+    <path android:pathData="M198,154 Q200,148 212,146 Q224,148 226,154 L228,178 Q220,180 212,180 Q204,180 196,178 Z"
+        android:fillColor="#111827"/>
+    <!-- Arms on table -->
+    <path android:pathData="M196,164 Q186,168 184,178 L196,178 Q198,174 202,168"
+        android:fillColor="#E8D5C0" android:strokeColor="#111827" android:strokeWidth="1"/>
+    <!-- Phone in hand -->
+    <path android:pathData="M196,170 Q194,168 196,164 L204,158 Q206,156 208,158 L210,172 Q212,174 210,176 L202,182 Q200,184 198,182 Z"
+        android:fillColor="#FFFFFF" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+
+    <!-- Message bubble between them -->
+    <path android:pathData="M170,152 Q168,146 174,144 L200,144 Q206,144 206,150 L206,158 Q206,164 200,164 L178,164 L174,170 L172,164 Q168,164 168,158 Z"
+        android:fillColor="#FFFFFF" android:strokeColor="#111827" android:strokeWidth="1.5"/>
+    <path android:pathData="M174,152 L200,152 M174,158 L192,158"
+        android:strokeColor="#D1D5DB" android:strokeWidth="1" android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+</vector>

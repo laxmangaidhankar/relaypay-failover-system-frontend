@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Running man with flag — black line art on transparent bg.
+  Viewport 200×200. Matches the mockup style illustration.
+  Man running right, holding black flag pole on left, motion lines right.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- ── FLAG POLE ── -->
+    <path
+        android:pathData="M52,30 L52,120"
+        android:strokeColor="#111827"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- ── FLAG (solid black) ── -->
+    <path
+        android:pathData="M52,30 L90,44 L52,58 Z"
+        android:fillColor="#111827"/>
+
+    <!-- ── HEAD ── -->
+    <path
+        android:pathData="M105,38 m0,0 a16,16 0,1,1 0.01,0 Z"
+        android:fillColor="#F5E6D3"
+        android:strokeColor="#111827"
+        android:strokeWidth="1.5"/>
+
+    <!-- ── HAIR ── -->
+    <path
+        android:pathData="M90,34 Q92,22 105,20 Q118,22 121,34 Q118,28 105,28 Q92,28 90,34 Z"
+        android:fillColor="#111827"/>
+
+    <!-- ── BEARD stubble ── -->
+    <path
+        android:pathData="M96,50 Q100,54 105,54 Q110,54 114,50"
+        android:strokeColor="#111827"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"/>
+
+    <!-- ── NECK ── -->
+    <path
+        android:pathData="M100,52 L100,62 M110,52 L110,62"
+        android:strokeColor="#F5E6D3"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- ── WHITE T-SHIRT BODY ── -->
+    <path
+        android:pathData="M88,62 Q92,56 105,56 Q118,56 122,62 L126,100 Q118,106 105,106 Q92,106 84,100 Z"
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#111827"
+        android:strokeWidth="1.8"/>
+
+    <!-- shirt collar detail -->
+    <path
+        android:pathData="M100,56 L105,64 L110,56"
+        android:strokeColor="#111827"
+        android:strokeWidth="1.2"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- ── LEFT ARM holding pole (forward, reaching left) ── -->
+    <path
+        android:pathData="M88,68 Q72,72 56,78"
+        android:strokeColor="#F5E6D3"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M88,68 Q72,72 56,78"
+        android:strokeColor="#111827"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000"/>
+    <!-- Hand grip on pole -->
+    <path
+        android:pathData="M50,74 Q48,78 52,82 Q56,84 60,80 Q64,76 60,72 Q56,68 50,74 Z"
+        android:fillColor="#F5E6D3"
+        android:strokeColor="#111827"
+        android:strokeWidth="1.5"/>
+
+    <!-- ── RIGHT ARM (swinging back) ── -->
+    <path
+        android:pathData="M122,68 Q138,80 144,96"
+        android:strokeColor="#F5E6D3"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M122,68 Q138,80 144,96"
+        android:strokeColor="#111827"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000"/>
+    <!-- Right hand -->
+    <path
+        android:pathData="M140,94 m0,0 a7,7 0,1,1 0.01,0 Z"
+        android:fillColor="#F5E6D3"
+        android:strokeColor="#111827"
+        android:strokeWidth="1.5"/>
+
+    <!-- ── DARK TROUSERS ── -->
+    <!-- Left leg (forward, bent) -->
+    <path
+        android:pathData="M84,100 Q78,120 66,136 Q62,144 68,150 L80,150 Q88,140 96,124 L105,106"
+        android:fillColor="#111827"
+        android:strokeColor="#111827"
+        android:strokeWidth="1"/>
+    <!-- Right leg (back, straight) -->
+    <path
+        android:pathData="M126,100 Q132,120 136,144 Q138,152 130,154 L118,154 Q114,144 110,126 L105,106"
+        android:fillColor="#111827"
+        android:strokeColor="#111827"
+        android:strokeWidth="1"/>
+
+    <!-- ── SHOES ── -->
+    <!-- Left shoe (forward foot) -->
+    <path
+        android:pathData="M62,148 Q54,152 58,160 Q64,164 78,162 L82,154 Q74,154 70,150 Z"
+        android:fillColor="#111827"/>
+    <!-- Right shoe (back foot, lifted) -->
+    <path
+        android:pathData="M118,152 Q110,156 114,164 Q120,168 132,164 L136,156 Q128,158 122,154 Z"
+        android:fillColor="#111827"/>
+
+    <!-- ── MOTION LINES (right side) ── -->
+    <path
+        android:pathData="M152,70 L172,70"
+        android:strokeColor="#111827"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M156,82 L178,82"
+        android:strokeColor="#9CA3AF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M154,94 L170,94"
+        android:strokeColor="#D1D5DB"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+</vector>
