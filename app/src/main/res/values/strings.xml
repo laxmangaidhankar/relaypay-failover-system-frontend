@@ -1,3 +1,47 @@
 <resources>
     <string name="app_name">RelayPay</string>
+    <string name="welcome_title">Welcome to\nRelayPay</string>
+    <string name="welcome_subtitle">Experience uninterrupted payments with speed, security, and reliability.</string>
+    <string name="sign_in_subtitle">Enter your mobile number to securely access your RelayPay Wallet.</string>
+    <string name="sign_in_title">Sign In</string>
+    <string name="mobile_number_label">Mobile Number</string>
+    <string name="mobile_number_hint">Enter your mobile number</string>
+    <string name="mobile_otp">OTP</string>
+
+    <string name="country_code">+91</string>
+    <string name="btn_continue">Continue</string>
+    <string name="otp_notice">We\'ll send a secure OTP to verify your identity.</string>
+    <string name="or_divider">OR</string>
+    <string name="btn_fingerprint">Continue with Fingerprint</string>
+    <string name="new_to_relaypay">New to RelayPay?</string>
+    <string name="create_wallet">Create Wallet →</string>
+    <string name="terms_notice">By continuing you agree to the Terms of Service and \nPrivacy Policy</string>
+
+
+    <string name="otp_title">Verify Your Number</string>
+    <string name="otp_subtitle">Enter the 6-digit code sent to your number via sms</string>
+
+
+    <string name="password_pin_label">Password / PIN</string>
+
+    <string name="forgot_password">Forgot password?</string>
+    <string name="btn_login">Log in</string>
+
+    <string name="btn_biometrics">Log in with biometrics</string>
+
+    <string name="create_account">Create account</string>
+
+    <string name="onboard_headline">Easy Online Payment</string>
+    <string name="onboard_subheadline">Make your payment experience more better today. No additional admin fee</string>
+    <string name="btn_proceed">Proceed</string>
+    <string name="btn_sign_up">Sign Up</string>
+
+    <!-- Premium login screen -->
+    <string name="login_title">Payments that never stop.</string>
+    <string name="login_card_title">Welcome Back</string>
+    <string name="login_card_subtitle">Sign in using your mobile number</string>
+    <string name="trusted_secure">Trusted &amp; Secure</string>
+    <string name="security_description">Your information is encrypted and securely protected.</string>
+    <string name="login_terms">By continuing, you agree to our \u003ca href=\"#\"\u003eTerms &amp; Conditions\u003c/a\u003e and \u003ca href=\"#\"\u003ePrivacy Policy\u003c/a\u003e.</string>
+
 </resources>
