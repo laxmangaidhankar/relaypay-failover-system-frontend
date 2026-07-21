@@ -9,11 +9,9 @@ import android.os.Looper;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.relaypay.BuildConfig;
 import com.relaypay.R;
 import com.relaypay.storage.SessionManager;
 
-import java.io.File;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -60,25 +58,5 @@ public class SplashActivity extends AppCompatActivity {
             finish();
 
         }, delay);
-    }
-
-    private boolean isDeviceCompromised() {
-        return isRooted() || isDebuggerAttachedInRelease();
-    }
-
-    private boolean isRooted() {
-        String[] paths = {
-                "/system/app/Superuser.apk", "/sbin/su", "/system/bin/su",
-                "/system/xbin/su", "/data/local/xbin/su", "/data/local/bin/su",
-                "/system/sd/xbin/su", "/system/bin/failsafe/su", "/data/local/su"
-        };
-        for (String path : paths) {
-            if (new File(path).exists()) return true;
-        }
-        return Build.TAGS != null && Build.TAGS.contains("test-keys");
-    }
-
-    private boolean isDebuggerAttachedInRelease() {
-        return !BuildConfig.DEBUG && Debug.isDebuggerConnected();
     }
 }
