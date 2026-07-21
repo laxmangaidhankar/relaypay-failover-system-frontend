@@ -15,6 +15,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:paddingBottom="80dp"
+
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
@@ -26,22 +27,46 @@
             android:paddingEnd="16dp"
             android:paddingTop="20dp">
 
+
             <!-- ── TOP BAR: logo + name ── -->
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/headerLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+
+                android:layout_height="150dp"
+                android:elevation="4dp">
+
+                <!-- Left Blue Circle -->
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:alpha="0.08"
+                    android:background="@drawable/bg_avatar_circle"
+                    android:translationX="-80dp"
+                    android:translationY="-80dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <!-- Right Green Circle -->
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:alpha="0.08"
+                    android:background="@drawable/il_payment_people"
+                    android:translationX="60dp"
+                    android:translationY="-40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/ivLogo"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/ic_relaypay_logo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
                     android:background="@drawable/bg_logo_circle_dark"
-                    android:padding="5dp"
-                    android:contentDescription="@string/app_name" />
-
+                    android:src="@drawable/ic_relaypay_logo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -49,11 +74,13 @@
                     android:layout_marginStart="8dp"
                     android:text="@string/app_name"
                     android:textColor="#111827"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivLogo"
+                    app:layout_constraintTop_toTopOf="@id/ivLogo"
+                    app:layout_constraintBottom_toBottomOf="@id/ivLogo"/>
 
-            </LinearLayout>
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- ── GREETING + BALANCE ROW ── -->
             <RelativeLayout

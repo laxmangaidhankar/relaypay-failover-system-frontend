@@ -156,9 +156,8 @@
                     android:layout_weight="1"
                     android:background="@null"
                     android:hint="MPIN"
-
+                    android:inputType="numberPassword"
                     android:imeOptions="actionDone"
-                    android:inputType="phone"
                     android:maxLength="4"
                     android:textColor="@color/onboard_text_dark"
                     android:textColorHint="#9CA3AF"
