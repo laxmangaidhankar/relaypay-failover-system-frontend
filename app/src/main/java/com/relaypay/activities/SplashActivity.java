@@ -1,9 +1,7 @@
 package com.relaypay.activities;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Debug;
 import android.os.Handler;
 import android.os.Looper;
 
@@ -36,25 +34,24 @@ public class SplashActivity extends AppCompatActivity {
 
             Intent intent = new Intent(SplashActivity.this, AuthenticationActivity.class);
 
-            if (session.hasValidAccessToken()) {
-                intent.putExtra(AuthenticationActivity.EXTRA_START_DEST,
-                        AuthenticationActivity.DEST_MPIN_LOGIN);
-
-            } else if (session.hasRefreshToken()) {
-
-                intent.putExtra(AuthenticationActivity.EXTRA_START_DEST,
-                        AuthenticationActivity.DEST_MPIN_LOGIN);
-                intent.putExtra(AuthenticationActivity.EXTRA_NEEDS_REFRESH, true);
-
+            if (session.isLoggedIn()) {
+                intent.putExtra(
+                        AuthenticationActivity.EXTRA_START_DEST,
+                        AuthenticationActivity.DEST_MPIN_LOGIN
+                );
             } else {
-
                 session.clearSession();
-                intent.putExtra(AuthenticationActivity.EXTRA_START_DEST,
-                        AuthenticationActivity.DEST_MOBILE_ENTRY);
+                intent.putExtra(
+                        AuthenticationActivity.EXTRA_START_DEST,
+                        AuthenticationActivity.DEST_MOBILE_ENTRY
+                );
             }
 
             startActivity(intent);
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            overridePendingTransition(
+                    android.R.anim.fade_in,
+                    android.R.anim.fade_out
+            );
             finish();
 
         }, delay);

@@ -49,7 +49,13 @@ public class AuthenticationActivity extends AppCompatActivity {
                 session.clearSession();
                 openLoginFragment();
             } else {
-                openMpinFragment(mobile);
+                Bundle bundle = new Bundle();
+                bundle.putString(ARG_MOBILE, mobile);
+
+                MpinLoginFragment fragment = new MpinLoginFragment();
+                fragment.setArguments(bundle);
+
+                replaceFragment(fragment, false);   // <-- false, not true
             }
         } else {
             openLoginFragment();
@@ -60,12 +66,14 @@ public class AuthenticationActivity extends AppCompatActivity {
         return needsSilentRefresh;
     }
     public void openLoginFragment() {
+
         getSupportFragmentManager().popBackStack(
                 null,
                 getSupportFragmentManager().POP_BACK_STACK_INCLUSIVE
         );
         replaceFragment(new LoginFragment(), false);
     }
+
 
     public void openRegisterMpinFragment(String mobile, String verificationToken) {
         Bundle bundle = new Bundle();
