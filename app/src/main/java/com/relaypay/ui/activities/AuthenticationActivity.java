@@ -1,4 +1,4 @@
-package com.relaypay.activities;
+package com.relaypay.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,20 +7,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.relaypay.R;
-import com.relaypay.fragments.LoginFragment;
-import com.relaypay.fragments.MpinLoginFragment;
-import com.relaypay.fragments.MpinRegisterFragment;
+import com.relaypay.ui.fragments.LoginFragment;
+import com.relaypay.ui.fragments.MpinLoginFragment;
+import com.relaypay.ui.fragments.MpinRegisterFragment;
 import com.relaypay.storage.SessionManager;
-
 
 public class AuthenticationActivity extends AppCompatActivity {
 
     public static final String ARG_MOBILE = "mobile";
     public static final String ARG_VERIFICATION_TOKEN = "verificationToken";
-
     public static final String EXTRA_START_DEST = "start_dest";
     public static final String EXTRA_NEEDS_REFRESH = "needs_refresh";
-
     public static final String DEST_MPIN_LOGIN = "mpin_login";
     public static final String DEST_MOBILE_ENTRY = "mobile_entry";
 
@@ -55,7 +52,7 @@ public class AuthenticationActivity extends AppCompatActivity {
                 MpinLoginFragment fragment = new MpinLoginFragment();
                 fragment.setArguments(bundle);
 
-                replaceFragment(fragment, false);   // <-- false, not true
+                replaceFragment(fragment, false);
             }
         } else {
             openLoginFragment();
@@ -65,8 +62,8 @@ public class AuthenticationActivity extends AppCompatActivity {
     public boolean isNeedsSilentRefresh() {
         return needsSilentRefresh;
     }
-    public void openLoginFragment() {
 
+    public void openLoginFragment() {
         getSupportFragmentManager().popBackStack(
                 null,
                 getSupportFragmentManager().POP_BACK_STACK_INCLUSIVE
@@ -75,7 +72,7 @@ public class AuthenticationActivity extends AppCompatActivity {
     }
 
 
-    public void openRegisterMpinFragment(String mobile, String verificationToken) {
+    public void openRegisterMPINFragment(String mobile, String verificationToken) {
         Bundle bundle = new Bundle();
         bundle.putString(ARG_MOBILE, mobile);
         bundle.putString(ARG_VERIFICATION_TOKEN, verificationToken);
@@ -85,7 +82,7 @@ public class AuthenticationActivity extends AppCompatActivity {
         replaceFragment(fragment, true);
     }
 
-    public void openMpinFragment(String mobile) {
+    public void openMPINFragment(String mobile) {
         Bundle bundle = new Bundle();
         bundle.putString(ARG_MOBILE, mobile);
 
@@ -100,7 +97,7 @@ public class AuthenticationActivity extends AppCompatActivity {
         SessionManager session = new SessionManager(getApplicationContext());
         session.saveSession(accessToken, refreshToken, expiryEpochMillis, userId, mobile);
 
-        Intent intent = new Intent(this, com.relaypay.activities.HomeActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();

@@ -9,7 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.button.MaterialButton;
@@ -19,7 +18,7 @@ import com.relaypay.auth.model.response.GenericResponse;
 import com.relaypay.auth.model.request.OtpVerifyRequest;
 import com.relaypay.auth.model.request.PhoneRequest;
 import com.relaypay.auth.model.response.OtpVerifyResponse;
-import com.relaypay.network.ApiClient;
+import com.relaypay.network.auth.ApiClient;
 
 import retrofit2.Call;
 import retrofit2.Callback;

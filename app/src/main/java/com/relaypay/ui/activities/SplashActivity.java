@@ -1,4 +1,4 @@
-package com.relaypay.activities;
+package com.relaypay.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import com.relaypay.storage.SessionManager;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static final long MIN_SPLASH_DURATION_MS = 2000;
+    private static final long MIN_SPLASH_DURATION_MS = 800;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

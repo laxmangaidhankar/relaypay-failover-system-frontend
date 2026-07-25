@@ -15,7 +15,7 @@ import com.relaypay.R;
 import com.relaypay.auth.model.response.CheckMobileResponse;
 import com.relaypay.auth.model.response.GenericResponse;
 import com.relaypay.auth.model.request.PhoneRequest;
-import com.relaypay.network.ApiClient;
+import com.relaypay.network.auth.ApiClient;
 
 import java.util.regex.Pattern;
 

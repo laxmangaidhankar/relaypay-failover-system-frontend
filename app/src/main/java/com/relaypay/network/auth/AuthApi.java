@@ -1,9 +1,11 @@
 package com.relaypay.network;
 
+import com.relaypay.auth.model.request.LoginRequest;
 import com.relaypay.auth.model.request.MpinSetRequest;
 import com.relaypay.auth.model.response.CheckMobileResponse;
 import com.relaypay.auth.model.response.GenericResponse;
 import com.relaypay.auth.model.request.OtpVerifyRequest;
+import com.relaypay.auth.model.response.LoginResponse;
 import com.relaypay.auth.model.response.OtpVerifyResponse;
 import com.relaypay.auth.model.request.PhoneRequest;
 import com.relaypay.auth.model.response.SetMpinResponse;
@@ -24,4 +26,7 @@ public interface AuthApi {
 
     @POST("api/v1/auth/register")
     Call<SetMpinResponse> setMpin(@Body MpinSetRequest request);
+
+    @POST("api/v1/auth/login")
+    Call<LoginResponse> loginMpin(@Body LoginRequest request);
 }

@@ -1,4 +1,4 @@
-package com.relaypay.activities;
+package com.relaypay.ui.activities;
 
 import android.os.Bundle;
 import android.widget.LinearLayout;
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 
 import com.relaypay.FamilyFragment;
 import com.relaypay.HistoryFragment;
-import com.relaypay.fragments.HomeFragment;
+import com.relaypay.ui.fragments.HomeFragment;
 import com.relaypay.ProfileFragment;
 import com.relaypay.R;
 

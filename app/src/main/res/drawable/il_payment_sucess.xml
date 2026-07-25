@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Payment success illustration — black line art on transparent bg.
+  Viewport 200×200. Matches the style of il_running_man.xml:
+  same palette (#111827 ink, #F5E6D3 warm neutral, white fill, gray
+  motion lines), same flat Material look.
+
+  Composition: phone on the left sends a payment card across an arrow
+  toward a green success badge with checkmark, with sparkles + motion
+  lines reinforcing the "sent" direction (left → right).
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- ══════════════ PHONE (left) ══════════════ -->
+    <!-- Phone body -->
+    <path
+        android:pathData="M18,52
+                           L58,52
+                           Q64,52 64,58
+                           L64,148
+                           Q64,154 58,154
+                           L18,154
+                           Q12,154 12,148
+                           L12,58
+                           Q12,52 18,52 Z"
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#111827"
+        android:strokeWidth="2.5"/>
+
+    <!-- Speaker slit -->
+    <path
+        android:pathData="M33,60 L43,60"
+        android:strokeColor="#111827"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- Screen inset -->
+    <path
+        android:pathData="M18,68 L58,68 L58,132 L18,132 Z"
+        android:fillColor="#F5E6D3"
+        android:strokeColor="#111827"
+        android:strokeWidth="1.5"/>
+
+    <!-- Screen content: simple payment-app rows -->
+    <path
+        android:pathData="M23,78 L53,78"
+        android:strokeColor="#111827"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M23,90 L45,90"
+        android:strokeColor="#111827"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.55"/>
+    <path
+        android:pathData="M23,100 L48,100"
+        android:strokeColor="#111827"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.55"/>
+
+    <!-- Small checkmark badge on screen (confirms "sent from here") -->
+    <path
+        android:pathData="M38,110 m-9,0 a9,9 0,1,1 18,0 a9,9 0,1,1 -18,0 Z"
+        android:fillColor="#16A34A"/>
+    <path
+        android:pathData="M33,110 L37,114 L44,105"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"/>
+
+    <!-- Home indicator -->
+    <path
+        android:pathData="M30,146 L46,146"
+        android:strokeColor="#111827"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- ══════════════ PAYMENT CARD (mid-flight) ══════════════ -->
+    <group
+        android:pivotX="98"
+        android:pivotY="88"
+        android:rotation="-12">
+        <path
+            android:pathData="M76,74 L120,74 Q124,74 124,78 L124,98 Q124,102 120,102 L76,102 Q72,102 72,98 L72,78 Q72,74 76,74 Z"
+            android:fillColor="#111827"/>
+        <!-- card stripe -->
+        <path
+            android:pathData="M72,82 L124,82 L124,87 L72,87 Z"
+            android:fillColor="#F5E6D3"/>
+        <!-- card number dots -->
+        <path
+            android:pathData="M78,95 L82,95 M87,95 L91,95 M96,95 L100,95"
+            android:strokeColor="#F5E6D3"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"/>
+    </group>
+
+    <!-- ══════════════ TRANSFER ARROW ══════════════ -->
+    <path
+        android:pathData="M68,118 Q100,128 130,118"
+        android:strokeColor="#111827"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <!-- arrowhead -->
+    <path
+        android:pathData="M122,110 L132,118 L121,124"
+        android:strokeColor="#111827"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"/>
+
+    <!-- ══════════════ SUCCESS BADGE (right) ══════════════ -->
+    <path
+        android:pathData="M162,120 m-34,0 a34,34 0,1,1 68,0 a34,34 0,1,1 -68,0 Z"
+        android:fillColor="#16A34A"/>
+    <!-- subtle inner ring for depth -->
+    <path
+        android:pathData="M162,120 m-27,0 a27,27 0,1,1 54,0 a27,27 0,1,1 -54,0 Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.2"
+        android:strokeAlpha="0.35"/>
+    <!-- checkmark -->
+    <path
+        android:pathData="M146,121 L157,132 L180,107"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"/>
+
+    <!-- ══════════════ SPARKLES ══════════════ -->
+    <!-- 4-point sparkle, upper-right of badge -->
+    <path
+        android:pathData="M186,68
+                           Q188,76 196,78
+                           Q188,80 186,88
+                           Q184,80 176,78
+                           Q184,76 186,68 Z"
+        android:fillColor="#111827"/>
+    <!-- small sparkle, lower-left of badge -->
+    <path
+        android:pathData="M133,152
+                           Q134,157 139,158
+                           Q134,159 133,164
+                           Q132,159 127,158
+                           Q132,157 133,152 Z"
+        android:fillColor="#9CA3AF"/>
+    <!-- tiny sparkle dot, above phone -->
+    <path
+        android:pathData="M40,36 m-2.4,0 a2.4,2.4 0,1,1 4.8,0 a2.4,2.4 0,1,1 -4.8,0 Z"
+        android:fillColor="#D1D5DB"/>
+
+    <!-- ══════════════ MOTION LINES (trailing the arrow) ══════════════ -->
+    <path
+        android:pathData="M70,132 L86,135"
+        android:strokeColor="#111827"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M74,140 L92,142"
+        android:strokeColor="#9CA3AF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M78,147 L92,148"
+        android:strokeColor="#D1D5DB"
+        android:strokeWidth="1.4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+</vector>
