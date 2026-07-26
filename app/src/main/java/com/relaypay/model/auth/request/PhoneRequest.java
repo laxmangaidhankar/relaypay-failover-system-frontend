@@ -1,4 +1,4 @@
-package com.relaypay.auth.model.request;
+package com.relaypay.model.auth.request;
 
 public class PhoneRequest {
     private String phone;
