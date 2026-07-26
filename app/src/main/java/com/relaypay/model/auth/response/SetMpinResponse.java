@@ -1,4 +1,4 @@
-package com.relaypay.auth.model.response;
+package com.relaypay.model.auth.response;
 
 public class SetMpinResponse {
 
