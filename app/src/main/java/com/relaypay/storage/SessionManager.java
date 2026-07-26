@@ -61,25 +61,24 @@ public class SessionManager {
         return prefs.getString(KEY_REFRESH_TOKEN, null);
     }
 
-    public String getUserId() {
-        return prefs.getString(KEY_USER_ID, null);
-    }
-
     public boolean hasValidAccessToken() {
-        String token = prefs.getString(KEY_ACCESS_TOKEN, null);
+        String token = getAccessToken();
         long expiry = prefs.getLong(KEY_TOKEN_EXPIRY, 0L);
         return token != null && System.currentTimeMillis() < expiry;
     }
 
     public boolean hasRefreshToken() {
-        return prefs.getString(KEY_REFRESH_TOKEN, null) != null;
+        return getRefreshToken() != null;
     }
-
     public boolean isLoggedIn() {
-        return hasValidAccessToken() || hasRefreshToken();
+        return getMobileNumber() != null &&
+                (hasValidAccessToken() || hasRefreshToken());
     }
 
     public void clearSession() {
         prefs.edit().clear().apply();
     }
+
+
+
 }

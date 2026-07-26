@@ -1,4 +1,4 @@
-package com.relaypay.network;
+package com.relaypay.network.auth;
 
 
 
@@ -26,7 +26,7 @@ public class ApiClient {
                     .build();
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.1.60:8000/")
+                    .baseUrl("http://192.168.1.69:8000/")
                     .client(client)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
