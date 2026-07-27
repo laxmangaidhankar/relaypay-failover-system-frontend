@@ -1,4 +1,4 @@
-package com.relaypay.viewmodel;
+package com.relaypay.viewmodel.auth;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

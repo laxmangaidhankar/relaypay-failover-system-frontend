@@ -1,6 +1,5 @@
-package com.relaypay.viewmodel;
+package com.relaypay.viewmodel.auth;
 
-import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -8,10 +7,6 @@ import androidx.lifecycle.ViewModel;
 import com.relaypay.model.auth.response.SetMpinResponse;
 import com.relaypay.repository.AuthRepository;
 import com.relaypay.repository.RepositoryCallback;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MpinRegisterViewModel extends ViewModel {
 
