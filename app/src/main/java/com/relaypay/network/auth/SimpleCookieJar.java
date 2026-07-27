@@ -1,4 +1,4 @@
-package com.relaypay.network;
+package com.relaypay.network.auth;
 
 import java.util.ArrayList;
 import java.util.HashMap;
