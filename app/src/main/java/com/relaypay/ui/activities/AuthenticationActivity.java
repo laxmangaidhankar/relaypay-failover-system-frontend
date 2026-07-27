@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.relaypay.R;
-import com.relaypay.ui.fragments.LoginFragment;
-import com.relaypay.ui.fragments.MpinLoginFragment;
-import com.relaypay.ui.fragments.MpinRegisterFragment;
+import com.relaypay.ui.auth.LoginFragment;
+import com.relaypay.ui.auth.MpinLoginFragment;
+import com.relaypay.ui.auth.MpinRegisterFragment;
 import com.relaypay.storage.SessionManager;
 
 public class AuthenticationActivity extends AppCompatActivity {
