@@ -1,4 +1,4 @@
-package com.relaypay.fragments;
+package com.relaypay.ui.auth;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -18,7 +18,7 @@ import androidx.navigation.Navigation;
 
 import com.google.android.material.button.MaterialButton;
 import com.relaypay.R;
-import com.relaypay.viewmodel.VerifyOtpViewModel;
+import com.relaypay.viewmodel.auth.VerifyOtpViewModel;
 
 public class VerifyOtpFragment extends Fragment {
 
@@ -123,7 +123,7 @@ public class VerifyOtpFragment extends Fragment {
             }
         });
 
-        viewModel.getVerified().observe(getViewLifecycleOwner(), response -> {
+        viewModel.getVerifyOtpResponse().observe(getViewLifecycleOwner(), response -> {
             if (response == null) return;
 
             Bundle args = new Bundle();

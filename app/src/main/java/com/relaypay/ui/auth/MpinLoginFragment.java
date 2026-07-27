@@ -1,4 +1,4 @@
-package com.relaypay.fragments;
+package com.relaypay.ui.auth;
 
 
 import android.annotation.SuppressLint;
@@ -11,14 +11,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.OptIn;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.media3.common.util.Log;
+import androidx.media3.common.util.UnstableApi;
 
-import com.relaypay.activities.AuthenticationActivity;
-import com.relaypay.activities.HomeActivity;
+import com.relaypay.storage.SessionManager;
+import com.relaypay.ui.activities.AuthenticationActivity;
+import com.relaypay.ui.activities.HomeActivity;
 import com.relaypay.R;
-import com.relaypay.auth.model.request.LoginRequest;
-import com.relaypay.viewmodel.MpinLoginViewModel;
+import com.relaypay.viewmodel.auth.MpinLoginViewModel;
 
 public class MpinLoginFragment extends Fragment {
 
@@ -27,6 +30,7 @@ public class MpinLoginFragment extends Fragment {
 
     private String mobile;
     private MpinLoginViewModel viewModel;
+    private SessionManager sessionManager;
 
     public MpinLoginFragment() {
         super(R.layout.fragment_mpin_login);
@@ -39,7 +43,7 @@ public class MpinLoginFragment extends Fragment {
 
         etMPIN = view.findViewById(R.id.etMPIN);
         btnMpinLogin = view.findViewById(R.id.btnMpinLogin);
-
+        sessionManager = new SessionManager(requireContext());
         viewModel = new ViewModelProvider(this).get(MpinLoginViewModel.class);
 
         if (getArguments() != null) {
@@ -55,9 +59,14 @@ public class MpinLoginFragment extends Fragment {
         return etMPIN.getText().toString().trim();
     }
 
+    @OptIn(markerClass = UnstableApi.class)
     private void login() {
+        Log.d("LOGIN", "Button clicked");
 
         String pin = getPin();
+
+        Log.d("LOGIN", "Phone = " + mobile);
+        Log.d("LOGIN", "PIN = " + pin);
 
         if (TextUtils.isEmpty(pin) || pin.length() != 4) {
             Toast.makeText(requireContext(),
@@ -70,14 +79,28 @@ public class MpinLoginFragment extends Fragment {
 
     }
 
+    @OptIn(markerClass = UnstableApi.class)
     private void observeViewModel() {
 
         viewModel.getLoginResponse().observe(getViewLifecycleOwner(), response -> {
 
+            if (response == null) return;
+
             if (response.isSuccess()) {
 
-                // TODO: Save access token
-                // sessionManager.saveAccessToken(response.getAccessToken());
+                sessionManager.saveSession(
+                        response.getAccessToken(),
+                        response.getRefreshToken(),
+                        response.getExpiresIn(),
+                        response.getUser().getId(),
+                        response.getUser().getPhone()
+                );
+                Log.d("SESSION", "Access Token: " + sessionManager.getAccessToken());
+                Log.d("SESSION", "Refresh Token: " + sessionManager.getRefreshToken());
+                Log.d("SESSION", "Phone: " + sessionManager.getMobileNumber());
+                Log.d("SESSION", "Logged In: " + sessionManager.isLoggedIn());
+
+
 
                 Intent intent = new Intent(requireActivity(), HomeActivity.class);
                 startActivity(intent);
@@ -85,15 +108,13 @@ public class MpinLoginFragment extends Fragment {
 
             } else {
 
-                Toast.makeText(requireContext(),
+                Toast.makeText(
+                        requireContext(),
                         response.getMessage(),
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT
+                ).show();
             }
         });
-
-        viewModel.getError().observe(getViewLifecycleOwner(), message ->
-                Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
-        );
     }
 
 }

@@ -1,4 +1,4 @@
-package com.relaypay.fragments;
+package com.relaypay.ui.auth;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -15,8 +15,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.button.MaterialButton;
 import com.relaypay.R;
-import com.relaypay.activities.AuthenticationActivity;
-import com.relaypay.viewmodel.MpinRegisterViewModel;
+import com.relaypay.ui.activities.AuthenticationActivity;
+import com.relaypay.viewmodel.auth.MpinRegisterViewModel;
 
 public class MpinRegisterFragment extends Fragment {
 
@@ -59,9 +59,6 @@ public class MpinRegisterFragment extends Fragment {
     private void attemptSetMpin() {
         String mpin = etMpin.getText() != null ? etMpin.getText().toString().trim() : "";
 
-        Toast.makeText(requireContext(),
-                "Mobile=" + mobile + "\nToken=" + verificationToken,
-                Toast.LENGTH_LONG).show();
 
         if (TextUtils.isEmpty(mpin)) {
             Toast.makeText(requireContext(), "Enter an MPIN", Toast.LENGTH_SHORT).show();

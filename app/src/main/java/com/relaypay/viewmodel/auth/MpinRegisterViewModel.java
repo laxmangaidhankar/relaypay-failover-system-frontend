@@ -5,9 +5,9 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.relaypay.auth.model.response.GenericResponse;
-import com.relaypay.auth.model.response.SetMpinResponse;
+import com.relaypay.model.auth.response.SetMpinResponse;
 import com.relaypay.repository.AuthRepository;
+import com.relaypay.repository.RepositoryCallback;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,44 +26,30 @@ public class MpinRegisterViewModel extends ViewModel {
     public LiveData<String> getErrorMessage() { return errorMessage; }
     public LiveData<SetMpinResponse> getMpinSet() { return mpinSet; }
 
-    public void setMpin(String phone, String verificationToken, String loginPin) {
+    public void setMpin(String phone,
+                        String verificationToken,
+                        String loginPin) {
+
         if (loginPin == null || !loginPin.matches("\\d{4}")) {
-            errorMessage.setValue("MPIN must be 4 digits");
+            errorMessage.setValue("MPIN must be exactly 4 digits");
             return;
         }
 
         loading.setValue(true);
 
         repository.setMpin(phone, verificationToken, loginPin,
-                new Callback<SetMpinResponse>() {
+                new RepositoryCallback<SetMpinResponse>() {
 
                     @Override
-                    public void onResponse(@NonNull Call<SetMpinResponse> call,
-                                           @NonNull Response<SetMpinResponse> response) {
-
+                    public void onSuccess(SetMpinResponse response) {
                         loading.setValue(false);
-
-                        if (response.isSuccessful() && response.body() != null) {
-                            SetMpinResponse body = response.body();
-
-                            if (body.getAccessToken() == null || body.getRefreshToken() == null) {
-                                errorMessage.setValue("Setup incomplete, please try again");
-                                return;
-                            }
-
-                            mpinSet.setValue(body);
-
-                        } else {
-                            errorMessage.setValue("Failed to set MPIN");
-                        }
+                        mpinSet.setValue(response);
                     }
 
                     @Override
-                    public void onFailure(@NonNull Call<SetMpinResponse> call,
-                                          @NonNull Throwable t) {
-
+                    public void onError(String message) {
                         loading.setValue(false);
-                        errorMessage.setValue("Network error, check your connection");
+                        errorMessage.setValue(message);
                     }
                 });
     }
