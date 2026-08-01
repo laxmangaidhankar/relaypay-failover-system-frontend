@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    tools:context=".ui.fragments.ManageBanksFragment">
+
+
+    <!-- Body -->
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="150dp"
+
+        android:clipToPadding="false"
+
+        android:paddingBottom="80dp">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:padding="20dp">
+
+
+            <!-- Empty Bank Card -->
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cardNoBank"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="3dp">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+
+                    android:padding="28dp">
+
+
+                    <!-- Illustration -->
+
+                    <ImageView
+
+                        android:id="@+id/imgNoBank"
+
+                        android:layout_width="180dp"
+
+                        android:layout_height="180dp"
+
+                        android:contentDescription="No bank linked"
+
+                        android:src="@drawable/il_payment_people" />
+
+
+                    <TextView
+
+                        android:id="@+id/tvNoBankTitle"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_marginTop="20dp"
+
+
+                        android:text="No Bank Account Linked"
+
+                        android:textColor="#111827"
+
+                        android:textSize="20sp"
+
+                        android:textStyle="bold" />
+
+
+                    <TextView
+
+                        android:id="@+id/tvNoBankDescription"
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_marginTop="10dp"
+
+
+                        android:gravity="center"
+
+
+                        android:text="Link your bank account to send money, receive payments and check your balance securely."
+
+                        android:textColor="#6B7280"
+
+                        android:textSize="14sp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+
+                        android:id="@+id/btnLinkBank"
+
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="52dp"
+
+
+                        android:layout_marginTop="24dp"
+
+
+                        android:text="Link Bank Account"
+
+                        android:textAllCaps="false"
+
+                        android:textColor="@android:color/white"
+
+                        android:textSize="16sp"
+
+                        android:textStyle="bold"
+
+
+                        app:backgroundTint="@color/onboard_text_dark"
+
+                        app:cornerRadius="16dp" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Security Info -->
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+
+                app:cardBackgroundColor="#EEF2FF"
+
+                app:cardCornerRadius="20dp"
+
+                app:cardElevation="0dp">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+
+                    android:padding="18dp">
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="🔒 Secure Banking"
+
+                        android:textColor="#111827"
+
+                        android:textSize="15sp"
+
+                        android:textStyle="bold" />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Your bank details are encrypted and protected by RelayPay security."
+
+                        android:textColor="#4B5563"
+
+                        android:textSize="13sp" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
