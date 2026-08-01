@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:fillViewport="true"
-    tools:context=".activities.AuthenticationActivity">
+    tools:context=".ui.activities.AuthenticationActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
