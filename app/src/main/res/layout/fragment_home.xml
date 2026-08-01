@@ -6,11 +6,22 @@
     android:layout_height="match_parent"
     android:background="#F8FAFC"
     android:fitsSystemWindows="true"
-    tools:context=".ui.activities.HomeActivity">'
+    tools:context=".ui.activities.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_header_gradient"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+    </LinearLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
         android:clipToPadding="false"
         android:paddingBottom="88dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -410,147 +421,13 @@
                 </GridLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- ── SECURITY STATUS CHIPS ── -->
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:clipToPadding="false"
-                android:padding="20dp"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <!-- Secure Payments chip -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardBackgroundColor="#132563EB"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Secure Payments"
-                                android:textColor="#2563EB"
-                                android:textSize="11sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- E2E Encrypted chip -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardBackgroundColor="#137C3AED"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="E2E Encrypted"
-                                android:textColor="#7C3AED"
-                                android:textSize="11sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- Instant Transfers chip -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardBackgroundColor="#13059669"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Instant Transfers"
-                                android:textColor="#059669"
-                                android:textSize="11sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- UPI Enabled chip -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        app:cardBackgroundColor="#13EA580C"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="UPI Enabled"
-                                android:textColor="#EA580C"
-                                android:textSize="11sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-            </HorizontalScrollView>
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvQr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="18dp"
                 android:layout_marginTop="16dp"
+                android:visibility="gone"
                 app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="3dp">
